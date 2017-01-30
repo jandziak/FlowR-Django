@@ -1,0 +1,6 @@
+<h1>{{ box.type_id }}</h1>
+<ul>
+{% for spec in box.param.all %}
+    <li>{{ spec.param }}</li>
+{% endfor %}
+</ul>

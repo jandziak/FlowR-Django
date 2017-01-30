@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        {% load staticfiles %}
+		<meta charset="UTF-8">
+		<title>RBlocks</title>
+		<link rel="stylesheet" href="{% static 'css/main.css' %}">
+	</head>
+	<body>
+		<!-- mainBlock [#START] -->
+		<div id='RB_mainBlock__background'>
+		
+			<!-- mainBlock__top [#START] -->
+			<div id='RB_mainBlock__top'>
+				TOP
+			</div>
+			<!-- mainBlock__top [#END] -->
+			
+			<!-- mainBlock__content [#START] -->
+			<div id='RB_mainBlock__content'>
+			
+				<!-- mainBlock__left [#START] -->
+				<div id='RB_mainBlock__left'>
+					LEFT
+					<div type = "wczytaj" class="RB_elem__block"  id="RB_elemt_block_1">
+						<div type = "wczytaj" class="RB_elem__blockTitle">
+							<span type = "wczytaj" >Wczytaj</span>
+						</div>
+						<div id ="RB_elem_popup_1" style = "height: 100px" class = "RB_elem_popup wczytaj_pop" type = "wczytaj">
+							<h3>Wybierz plik do analizy</h3>
+							<input type="file" id="wczytaj">	
+						</div>
+					</div>
+					<div class="RB_elem__block model"  id="RB_elemt_block_2" type = "model">
+						<div class="RB_elem__blockTitle" type = "model">
+							<span type = "model" >Model</span>
+						</div>						
+						<div id ="RB_elem_popup_2" style = "height: 280px" class = "RB_elem_popup model_pop" type = "model">
+							<h3>Zmienna zależna</h3>
+							<input type="text" id="wczytaj">
+							<h3>Zmienne niezależne</h3>
+							<input type="text" id="wczytaj">
+							<h3>Parametr eta</h3>
+							<input type="text" id="wczytaj">
+						</div>
+					</div>
+					<div  type = "export" class="RB_elem__block export"  id="RB_elemt_block_1">
+						<div  type = "export" class="RB_elem__blockTitle">
+							<span type = "export">Export</span>
+						</div>
+						<div id ="RB_elem_popup_2" style = "height: 100px" class = "RB_elem_popup export_pop" type = "export">
+						<h3>Wybierz plik do zapisu</h3>
+							<input type="file" id="zapisz">	
+						</div>
+					</div>
+				</div>
+				<!-- mainBlock__left [#END] -->
+				
+				<!-- mainBlock__right [#START] -->
+				<div id='RB_mainBlock__right'>
+					RIGHT
+				</div>
+				<!-- mainBlock__right [#END] -->
+				
+			</div>
+			<!-- mainBlock__content [#END] -->
+			
+			<!-- mainBlock__bottom [#START] -->
+			<div id='RB_mainBlock__bottom'>
+				BOTTOM
+			</div>
+			<!-- mainBlock__bottom [#END] -->
+			
+		</div>
+		<!-- mainBlock [#END] -->
+        {{ xa }}
+        <form method="post" action="">{% csrf_token %}
+		<input type="file" name = "train_data">Zbior treningowy</input>
+		<input type="file" name = "test_data">Zbior testowy</input>
+        <input type="submit" name = "Post">Wyslij dane</input>
+        </form>
+		<!-- overlay [#START] -->
+		<div id='RB_mainBlock__overlay'>
+		</div>
+		<!-- overlay [#END] -->
+	
+		<!-- SCRIPTS -->
+    <script src="{% static 'js/lib/jquery-2.1.4.min.js' %}"></script>
+    <script src="{% static 'js/lib/jquery-ui.min.js' %}"></script>
+    <script src="{% static 'js/core.js' %}"></script>
+
+
+{#    <img src="/static/bla.jpg"/> #}		
+{#    <img src="{% static 'bla.jpg' %}"/>#}
+
+	</body>
+
+</html> 
